@@ -1,0 +1,7 @@
+const paths={
+ exit:'M11 4H5v16h6m4-4 4-4-4-4m4 4H9',
+ home:'M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z',doc:'M6 3h9l4 4v14H6z M14 3v5h5M9 12h7m-7 4h7',bank:'m3 9 9-6 9 6M4 10h16M6 10v7m6-7v7m6-7v7M3 20h18',stock:'m3 7 9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4m-9 4v10',people:'M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2m19 0v-2a4 4 0 0 0-3-4m-5-8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zm4-4a4 4 0 0 1 0 8',reports:'M4 20h16M7 16v-4m5 4V5m5 11V9',lock:'M5 10h14v11H5zm3 0V7a4 4 0 1 1 8 0v3m-4 4v3',settings:'M4 7h16M4 17h16M8 4v6m8 4v6',search:'M16 16l5 5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0z',plus:'M12 5v14M5 12h14',chevron:'m9 6 6 6-6 6',down:'m6 9 6 6 6-6',calendar:'M4 5h16v16H4zm4-2v4m8-4v4M4 10h16',wallet:'M3 6h15v4h3v9H3zm18 4h-7v5h7m-4-2.5h.01',trend:'m3 17 6-6 4 4 7-7m-5 0h5v5',check:'m5 12 4 4L19 6',clock:'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0zm-9-5v5l3 2',download:'M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5',menu:'M4 6h16M4 12h16M4 18h16',close:'m6 6 12 12M18 6 6 18',info:'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0zM12 11v6m0-10h.01',link:'M9 15l6-6m-7 4-2 2a3 3 0 0 0 4 4l2-2m0-10 2-2a3 3 0 0 1 4 4l-2 2',history:'M4 10a8 8 0 1 1 1 7m-2-3v-5h5m4-2v5l3 2',filter:'M4 7h16M7 12h10m-7 5h4',external:'M7 17 17 7M9 7h8v8'
+};
+export const iconPath = name => paths[name] ?? paths.info;
+
+export function icon(name){return '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="'+iconPath(name)+'"/></svg>';}

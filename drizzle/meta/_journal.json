@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1795350000000,
+      "tag": "0000_ledo_workspace",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1795360000000,
+      "tag": "0001_ledo_accounts",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1795370000000,
+      "tag": "0002_ledo_accounting_profile",
+      "breakpoints": true
+    }
+  ]
+}

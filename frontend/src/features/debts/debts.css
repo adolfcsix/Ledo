@@ -1,0 +1,27 @@
+.debt-workspace,.debt-workspace .card {min-width:0}
+.debt-scope {display:grid;grid-template-columns:minmax(0,1fr) minmax(245px,305px);gap:10px 20px;align-items:end}
+.debt-date-form {display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:8px}
+.debt-scope p {grid-column:1/-1;margin:0}
+.debt-switch {display:flex;gap:8px;flex-wrap:wrap}
+.debt-cards {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.debt-kpi {padding:14px;text-align:left;display:grid;gap:6px;align-content:start;color:var(--ink);cursor:pointer}
+.debt-kpi .chip {width:max-content}
+.debt-kpi[aria-pressed=true] {border-color:var(--green);background:var(--accent-faint)}
+.debt-kpi strong {font-size:clamp(1.05rem,1.9vw,1.55rem);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.debt-bands {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 14px}
+.debt-band {min-width:0;display:grid;grid-template-columns:minmax(125px,1.15fr) minmax(24px,1fr) auto;align-items:center;gap:9px;
+  min-height:44px;text-align:left;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);padding:6px 9px;cursor:pointer;font-size:.81rem}
+.debt-band:hover,.debt-band[aria-pressed=true] {border-color:var(--green);background:var(--accent-faint)}
+.debt-band-track {border-radius:5px;background:#e8edeb;height:7px;display:block;overflow:hidden}
+.debt-band-track>span {height:100%;border-radius:5px;background:#396b79;display:block}
+.debt-band-track>.debt-band-late {background:#ab7848}
+.debt-band strong,.debt-number {font-variant-numeric:tabular-nums}
+.debt-filter {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,175px),1fr));gap:10px}
+.debt-result,.debt-pagination {display:flex;flex-wrap:wrap;align-items:center;gap:9px;justify-content:space-between}
+.debt-result p {margin:0}
+.debt-code {display:block;color:var(--muted)}
+.debt-workspace td:has(.debt-number) {text-align:right}
+.debt-action {border-top:1px solid var(--line)}
+@media(max-width:1080px){.debt-bands {grid-template-columns:1fr}}
+@media(max-width:680px){.debt-cards {grid-template-columns:repeat(2,minmax(0,1fr))}.debt-scope {grid-template-columns:1fr}}
+@media(max-width:370px){.debt-date-form {grid-template-columns:1fr}.debt-band {grid-template-columns:minmax(0,1fr) auto}.debt-band-track {display:none}.debt-kpi {padding:11px}}

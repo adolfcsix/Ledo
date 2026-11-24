@@ -1,0 +1,29 @@
+{
+  "name": "ledo-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/integration/*.test.mjs",
+    "dev": "npm run build && npm start",
+    "start": "node scripts/start.mjs",
+    "demo": "npm run build && node scripts/dev.mjs",
+    "demo:reports": "npm run build && node scripts/dev.mjs --reports"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-react": "^6.3.0",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.8"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
+  }
+}

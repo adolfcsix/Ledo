@@ -1,0 +1,10 @@
+dialog.document-batch-dialog{width:min(1090px,calc(100% - 24px));max-width:calc(100% - 24px);overflow:auto}
+.document-batch-dialog .dialog-head{position:sticky;z-index:1;top:0;background:var(--paper)}
+.batch-filters{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:10px}
+.batch-root input[type="checkbox"]{width:18px;height:18px;accent-color:var(--green)}
+.batch-actual{width:8rem;max-width:100%;border:1px solid var(--line);border-radius:7px;padding:6px 8px}
+.batch-actual:disabled{opacity:.45}
+.batch-root .dialog-actions{position:sticky;bottom:0;background:var(--paper);padding:9px 0;border-top:1px solid var(--line)}
+.batch-root [hidden]{display:none}
+@media(max-width:720px){.batch-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:375px){.batch-filters{grid-template-columns:1fr}}

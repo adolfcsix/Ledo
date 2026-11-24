@@ -1,0 +1,75 @@
+.financial-overview{display:grid;gap:17px;min-width:0;--chart-primary:#286475;--chart-secondary:#b98548}
+.overview-title,.overview-panel-head,.overview-metric-top,.overview-debt-item>div:first-child{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.overview-title{margin-bottom:2px;align-items:end;flex-wrap:wrap}
+.overview-title h1{font-size:clamp(1.72rem,3vw,2.55rem);letter-spacing:-.05em;line-height:1.12}
+.overview-title p,.overview-panel-head p,.overview-metric p{margin-top:5px;color:var(--muted);font-size:.87rem}
+.overview-tools,.overview-legend,.overview-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.overview-tools label,.overview-legend label{display:inline-flex;align-items:center;gap:7px;font-size:.87rem;color:var(--muted)}
+.overview-tools select,.overview-legend select{padding:6px 11px;background:white;border:1px solid #d7e3da;border-radius:8px;color:var(--ink);min-height:42px}
+.overview-sample{background:#eef2e5;border:1px solid #e3ead9;color:#455e41;border-radius:7px;padding:7px 9px;font-size:.8rem}
+.overview-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.overview-panel,.overview-metric{background:#fff;border:1px solid var(--line);border-radius:7px;min-width:0}
+.overview-metric{padding:14px 16px 16px}
+.overview-metric-top{margin-bottom:10px;color:#3d5849;font-weight:670;font-size:.87rem}
+.overview-icon{display:grid;place-items:center;width:34px;height:34px;flex:none;border-radius:9px;background:#e5f1e8;color:#2b6d52}
+.overview-icon.sage{background:#edf1df;color:#556140}
+.overview-icon.gold{background:#f8eedc;color:#795b25}
+.overview-icon.blue{background:#e7f1f1;color:#416b70}
+.overview-metric strong{font-size:clamp(1.3rem,2.25vw,2.05rem);font-weight:720;letter-spacing:-.04em;line-height:1.16;overflow-wrap:anywhere}
+.overview-metric small{color:var(--muted);font-size:.8rem;margin-left:5px;white-space:nowrap}
+.overview-grid{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(240px,1fr);gap:15px}
+.overview-panel{padding:17px 18px}
+.overview-panel-head{align-items:start;margin-bottom:14px}
+.overview-panel-head h2{color:#1d3a2d;line-height:1.25;font-size:1.12rem;letter-spacing:-.02em}
+.overview-switch{display:inline-flex;background:var(--accent-faint);padding:3px;border-radius:8px;white-space:nowrap}
+.overview-switch button{border:0;background:transparent;border-radius:6px;padding:5px 9px;min-height:34px;color:#365646;font-size:.82rem;font-weight:640}
+.overview-switch button[aria-pressed=true]{background:var(--green);color:#fff}
+.overview-legend{margin-bottom:9px;font-size:.83rem;color:#52665a}
+.overview-legend>span{display:inline-flex;align-items:center;gap:6px}
+.overview-legend>label{margin-left:auto}
+.overview-legend i{width:11px;height:11px;border-radius:3px}
+.overview-legend i.primary,.overview-columns i.primary{background:var(--chart-primary)}
+.overview-legend i.secondary,.overview-columns i.secondary{background:var(--chart-secondary)}
+.overview-graph-scroll{overflow-x:auto;padding:8px 3px 0}
+.overview-graph{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px;min-width:275px;--plot:153px}
+.overview-graph.daily{min-width:760px}
+.overview-ticks{height:var(--plot);display:flex;flex-direction:column;justify-content:space-between;text-align:right;color:#5b7165;font-size:.72rem;line-height:0}
+.overview-plot{position:relative;min-width:0}
+.overview-gridlines{position:absolute;inset:0 0 auto;height:var(--plot);display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
+.overview-gridlines i{height:0;border-top:1px solid #e5ede6}
+.overview-bars{position:relative;display:flex;justify-content:space-around}
+.overview-bar-group{flex:1;min-width:0;background:transparent;border:0;padding:0 3px;color:#415a4c}
+.overview-bar-group[aria-pressed=true],.overview-bar-group:hover{background:#e7f2ea87}
+.overview-columns{height:var(--plot);display:flex;gap:4px;justify-content:center;align-items:end}
+.overview-columns i{width:min(22px,38%);border-radius:4px 4px 0 0}
+.overview-axis-label{display:block;padding-top:6px;font-size:.73rem;font-weight:600;white-space:nowrap}
+.overview-data{margin-top:10px;color:#365646;font-size:.86rem}
+.overview-data summary{cursor:pointer}
+.overview-progress{height:8px;background:#e8eeea;border-radius:6px;margin:9px 0}
+.overview-progress span{display:block;height:100%;background:var(--chart-primary);border-radius:6px}
+.overview-debt-item+.overview-debt-item{margin-top:18px;padding-top:16px;border-top:1px solid #e7ede7}
+.overview-debt-item:nth-of-type(3) .overview-progress span{background:#af8051}
+.overview-debt-item strong{font-weight:700;color:#22563e;font-variant-numeric:tabular-nums}
+.overview-debt-item p{font-size:.85rem;color:var(--muted);line-height:1.5}
+.overview-debt-item p+p{margin-top:3px;font-size:.79rem}
+.overview-reconcile{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 16px}
+.overview-reconcile div{min-width:0;display:grid;gap:2px;padding:5px 0;border-bottom:1px solid #e8eee8}
+.overview-reconcile dt{font-size:.81rem;color:#496355}
+.overview-reconcile dd{margin:0;font-weight:670;font-size:.96rem;overflow-wrap:anywhere}
+.overview-table{overflow-x:auto}
+.overview-table table{width:100%;min-width:370px}
+.overview-data .overview-table{padding-top:8px}
+@media(max-width:1130px){.overview-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.overview-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:480px){.overview-panel,.overview-metric{padding:12px}.overview-panel-head{flex-wrap:wrap}.overview-legend>label{margin-left:0}.overview-graph{--plot:125px}}
+@media(max-width:355px){.overview-metrics{grid-template-columns:1fr}}
+
+.overview-tools label,.overview-legend label{white-space:nowrap}
+
+.overview-grid.overview-single{grid-template-columns:minmax(0,1fr)}
+.overview-customize{background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 15px}
+.overview-customize summary{cursor:pointer;color:#244f40;font-weight:650;font-size:.88rem;padding:4px 0}
+.overview-customize fieldset{display:flex;gap:8px 16px;flex-wrap:wrap;margin:8px 0 2px;padding:5px 0;border:0}
+.overview-customize legend{font-size:.83rem;color:var(--muted);padding:0}
+.overview-customize label{display:flex;align-items:center;gap:6px;min-height:38px;font-size:.87rem}
+.overview-customize input{width:16px;height:16px;accent-color:var(--green)}

@@ -1,0 +1,40 @@
+dialog.utilities-dialog {
+  width: min(1050px, calc(100% - 28px));
+  max-width: calc(100% - 28px);
+  margin: clamp(12px, 8vh, 78px) auto auto;
+  max-height: calc(100dvh - clamp(24px, 10vh, 95px));
+  overflow-y: auto;
+}
+.utilities-dialog .dialog-head{position:sticky;top:0;z-index:1;background:var(--paper)}
+.utility-context{font-size:.86rem;color:var(--muted)}
+.utility-search{max-width:420px}
+.utility-result-count{font-size:.84rem;color:var(--muted)}
+.utility-result-count:empty{display:none}
+.utility-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.utility-group{padding:10px 12px;border-top:2px solid #40535c;background:#fff;min-width:0}
+.utility-group h3{display:flex;align-items:center;gap:8px;margin:1px 3px 8px;font-size:.94rem;color:#214b3b}
+.utility-group h3 svg,.utility-icon svg{width:17px;height:17px}
+.utility-group ul{list-style:none;padding:0;margin:0}
+.utility-group li+li{border-top:1px solid #e2ebe1}
+.utility-item{display:grid;grid-template-columns:32px minmax(0,1fr) 16px;align-items:center;gap:9px;width:100%;min-height:48px;padding:7px 5px;border:0;border-radius:7px;background:transparent;color:var(--ink);text-align:left}
+.utility-item:hover,.utility-item:focus-visible{background:var(--accent-faint)}
+.utility-item strong,.utility-item small{display:block;overflow-wrap:anywhere}
+.utility-item strong{font-size:.88rem}
+.utility-item small{font-size:.76rem;color:#496156}
+.utility-item>svg{width:15px;height:15px;color:#4a715f}
+.utility-icon{display:grid;place-items:center;width:32px;height:32px;color:var(--green)}
+.utility-empty{color:var(--muted);padding:8px 0;grid-column:1/-1}
+@media(max-width:690px){
+  .topbar .desktop-logout{display:none}
+  .topbar .utilities-toggle{gap:0;padding:0;width:44px;min-height:44px}
+  .topbar .utilities-toggle span{display:none}
+}
+@media(max-width:620px){
+  .utility-grid{grid-template-columns:1fr}
+  .utilities-dialog .dialog-body{padding-inline:14px}
+  .utilities-dialog .dialog-head{padding-inline:14px}
+}
+@media(max-width:435px){
+  .topbar .actor-label{display:none}
+  .topbar .breadcrumb b{overflow-wrap:anywhere}
+}

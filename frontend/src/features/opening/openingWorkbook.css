@@ -1,0 +1,29 @@
+.opening-import {min-width:0;gap:16px}
+.opening-import-head,.opening-import-file-status {display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.opening-import-head h2 {margin:0 0 5px;font-size:1.18rem}
+.opening-import-head p {margin:0;color:var(--muted)}
+.opening-import-head a {text-decoration:none}
+.opening-import-file-status span {overflow-wrap:anywhere;min-width:0}
+.opening-import-steps,.opening-import-summary {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0;margin:0}
+.opening-import-steps li,.opening-import-summary>div {display:grid;align-content:start;gap:5px;padding:12px;border-radius:9px;background:#f1f5ef}
+.opening-import-steps li span,.opening-import-summary span {color:var(--muted);font-size:.85rem}
+.opening-import-summary strong {font-size:1.08rem;overflow-wrap:anywhere}
+.opening-file input[type=file] {padding:6px 10px;min-width:0}
+.opening-file input::file-selector-button {border:0;background:#e4eee3;color:#214c3a;padding:7px 12px;border-radius:6px;margin-right:9px;font:inherit;cursor:pointer}
+.opening-file p {margin:6px 0 0}
+.opening-error {border:1px solid #e9d1bd;border-radius:9px;min-width:0;overflow:hidden}
+.opening-error h3,.opening-error p {margin:0;padding:10px 14px;color:#774916;background:#fcf0dc}
+.opening-error p {padding-top:0}
+.opening-error td:last-child {white-space:normal;min-width:12rem;overflow-wrap:anywhere}
+.opening-preview {min-width:0;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.opening-preview summary {cursor:pointer;padding:12px 14px;font-weight:650}
+.opening-preview summary .chip {margin-left:5px}
+.opening-preview p {padding:0 14px 12px;margin:0}
+.opening-import-confirm {background:#f1f5ef;padding:14px;border-radius:9px;gap:10px}
+.opening-import-confirm label {display:flex;align-items:flex-start;gap:9px;font-size:.88rem;cursor:pointer}
+.opening-import-confirm input[type=checkbox] {appearance:auto;width:18px;height:18px;min-height:auto;margin-top:2px;flex:none;accent-color:#315f47}
+@media(max-width:650px){
+  .opening-import-steps {grid-template-columns:1fr}
+  .opening-import-summary {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .opening-import-summary>div:last-child {grid-column:1/-1}
+}
